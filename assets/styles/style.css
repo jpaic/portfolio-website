@@ -332,7 +332,96 @@ nav .container {
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
+/* Experience Section */
+.experience-section {
+  background-color: var(--bg-color);
+}
+
+.experience-section .section-title {
+  margin-bottom: 2.5rem;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border-left: 4px solid var(--primary-color);
+}
+
+.experience-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.experience-header {
+  margin-bottom: 1.25rem;
+}
+
+.experience-meta h3 {
+  font-size: 1.3rem;
+  color: var(--light-text);
+  margin-bottom: 0.25rem;
+}
+
+.experience-meta h4 {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.experience-date {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.experience-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(var(--primary-color-rgb), 0.15);
+  color: var(--primary-color);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.experience-details {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-details li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.experience-details li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
 /* Skills Section */
+.skills-section {
+  background-color: var(--section-bg);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18.625rem, 1fr));
@@ -366,12 +455,21 @@ nav .container {
 }
 
 /* Projects Section */
+.projects-section {
+  height: auto;
+  padding: 1.5rem 0;
+}
+
+.projects-section .section-title {
+  margin-bottom: 3vh;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18.75rem, .75fr));
-  grid-template-rows: 0.7fr 0.7fr 0.7fr;
-  gap: 1.875rem;
-  margin-bottom: 20vh;
+  grid-template-rows: 20rem 20rem;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .project-card {
@@ -593,6 +691,10 @@ nav .container {
   .skill-card:hover {
 	transform: none;
   }
+
+  .experience-card:hover {
+    transform: none;
+  }
   
   .btn-primary:hover {
 	background-color: var(--primary-color);
@@ -610,7 +712,7 @@ nav .container {
   }
   
   .projects-grid{
-	grid-template-rows: 1fr 1fr 1fr;  
+	grid-template-rows: auto;
 	gap: 1rem;
   }
 	
@@ -623,6 +725,9 @@ nav .container {
   }
   .skill-card{
 	padding:0.5rem;  
+  }
+  .experience-card{
+	padding:1rem;  
   }
   .project-info{
 	padding:1rem;   
@@ -746,6 +851,9 @@ nav .container {
   }
   
   .skill-card{
+	padding:0.75rem;  
+  }
+  .experience-card{
 	padding:0.75rem;  
   }
   .project-info{

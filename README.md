@@ -8,7 +8,7 @@ Hosted live via GitHub Pages:
 ---
 
 ### Connect with Me
-[![GitHub](https://img.shields.io/badge/GitHub-jpaic-181717?logo=github)](https://github.com/jpaic) [![LinkedIn](https://img.shields.io/badge/LinkedIn-JovanPaic-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jovan-paić-4582052a0) [![Twitter](https://img.shields.io/badge/X-@jovanpaic-1DA1F2?logo=twitter&logoColor=white)](https://x.com/jovanpaic)
+[![GitHub](https://img.shields.io/badge/GitHub-jpaic-181717?logo=github)](https://github.com/jpaic) [![LinkedIn](https://img.shields.io/badge/LinkedIn-JovanPaic-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jovanpaic/) [![Twitter](https://img.shields.io/badge/X-@jovanpaic-1DA1F2?logo=twitter&logoColor=white)](https://x.com/jovanpaic)
 
 
 
