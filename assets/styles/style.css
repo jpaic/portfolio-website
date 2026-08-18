@@ -335,6 +335,8 @@ nav .container {
 /* Experience Section */
 .experience-section {
   background-color: var(--bg-color);
+  height: auto;
+  min-height: 100vh;
 }
 
 .experience-section .section-title {
@@ -342,20 +344,65 @@ nav .container {
 }
 
 .experience-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  max-width: 50rem;
+  position: relative;
+  max-width: 62rem;
   margin: 0 auto;
+  padding: 0.5rem 0;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: rgba(var(--primary-color-rgb), 0.25);
+  border-radius: 2px;
+  transform: translateX(-50%);
 }
 
 .experience-card {
+  position: relative;
+  width: calc(50% - 1.5rem);
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
   padding: 1.25rem 1.5rem;
   box-shadow: var(--box-shadow);
   transition: var(--transition);
   border-left: 4px solid var(--primary-color);
+  margin-bottom: 2.5rem;
+}
+
+.experience-card:nth-child(odd) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.experience-card:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 1.75rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  border: 3px solid var(--bg-color);
+  box-shadow: 0 0 0 2px rgba(var(--primary-color-rgb), 0.4);
+  z-index: 1;
+}
+
+.experience-card:nth-child(odd)::before {
+  right: calc(-1.5rem - 0.4375rem);
+}
+
+.experience-card:nth-child(even)::before {
+  left: calc(-1.5rem - 0.4375rem);
 }
 
 .experience-card:hover {
@@ -738,6 +785,27 @@ nav .container {
   
 .hamburger {
     display: block;
+  }
+
+  .experience-timeline::before {
+    left: 0;
+    transform: none;
+  }
+
+  .experience-card,
+  .experience-card:nth-child(odd),
+  .experience-card:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1.5rem;
+  }
+
+  .experience-card::before,
+  .experience-card:nth-child(odd)::before,
+  .experience-card:nth-child(even)::before {
+    left: calc(-0.4375rem + 2px);
+    right: auto;
   }
 
   .nav-list {
